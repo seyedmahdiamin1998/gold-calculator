@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Gold Calculator
+This is a personal practice project to use my **React** and **TailwindCSS** programming skills to calculate the price of gold artifacts in the Iranian market according to weight, wages, taxes, and stones used in it. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Preview
+![Screenshot](.//github//img//preview.JPG)
 
 ## Available Scripts
 
