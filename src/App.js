@@ -12,38 +12,23 @@ function App() {
   const [taxPercent, setTaxPercent] = useState("9");
 
 
-  // function goldPriceCalculation(weight, goldPriceGeram) {
-  //   return Math.round(weight * goldPriceGeram)
-  // };
-
-  // function OjratSakhtCalculation(goldPrice, ojratSakhtPercent) {
-  //   return Math.round(goldPrice * (Number(ojratSakhtPercent) * 0.01))
-  // };
-
-  // function hagheVitrinCalculation(goldPrice, ojratSakht, hagheVitrinPercent) {
-  //   return Math.round((goldPrice + ojratSakht) * (hagheVitrinPercent * 0.01))
-  // };
-
-  // function taxCalculation(hagheVitrin, ojratSakht, taxPercent) {
-  //   return Math.round((hagheVitrin + ojratSakht) * (taxPercent * 0.01))
-  // };
   // ------------------------------------------------------------------------------------------------------------------------
   function goldPriceCalculation(goldWeight, goldPriceGeram) {
     return Math.round(goldWeight * goldPriceGeram);
-  }; // ✅
+  };
 
   function OjratSakhtCalculation(goldWeight, goldPriceGeram, ojratSakhtPercent) {
     const goldPrice = goldWeight * goldPriceGeram;
     const result = Math.round(goldPrice * (Number(ojratSakhtPercent) * 0.01));
     return result
-  }; // ✅
+  };
 
   function hagheVitrinCalculation(goldWeight, goldPriceGeram, ojratSakhtPercent, hagheVitrinPercent) {
     const goldPrice = goldWeight * goldPriceGeram;
     const ojratSakht = goldPrice * (Number(ojratSakhtPercent) * 0.01);
     const result = Math.round((goldPrice + ojratSakht) * (hagheVitrinPercent * 0.01));
     return result
-  }; // ✅
+  };
 
   function taxCalculation(goldWeight, goldPriceGeram, ojratSakhtPercent, hagheVitrinPercent, taxPercent) {
     const goldPrice = goldWeight * goldPriceGeram;
@@ -51,16 +36,16 @@ function App() {
     const hagheVitrin = (goldPrice + ojratSakht) * (hagheVitrinPercent * 0.01);
     const result = Math.round((hagheVitrin + ojratSakht) * (taxPercent * 0.01))
     return result
-  }; // ✅
+  };
 
   function goldPriceFinal(goldWeight, goldPriceGeram, ojratSakhtPercent, hagheVitrinPercent, taxPercent, stonePrice) {
     const goldPrice = goldWeight * goldPriceGeram;
     const ojratSakht = goldPrice * (Number(ojratSakhtPercent) * 0.01);
     const hagheVitrin = (goldPrice + ojratSakht) * (hagheVitrinPercent * 0.01);
     const tax = (hagheVitrin + ojratSakht) * (taxPercent * 0.01);
-    const result = Math.round(goldPrice + ojratSakht + hagheVitrin + tax + stonePrice);
+    const result = Math.round(goldPrice + ojratSakht + hagheVitrin + tax + Number(stonePrice));
     return result;
-  }; // ✅
+  };
 
 
   return (
